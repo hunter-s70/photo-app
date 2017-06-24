@@ -9,7 +9,7 @@ define(['angular'], function (angular) {
    * Controller of the angularApp
    */
   angular.module('angularApp.controllers.MainCtrl', [])
-    .controller('MainCtrl', function ($scope, $http) {
+    .controller('MainCtrl', function ($scope, $http, $location) {
         $scope.response = null;
         $scope.method = 'GET';
         $scope.url = 'http://jsonplaceholder.typicode.com/photos';
@@ -23,5 +23,9 @@ define(['angular'], function (angular) {
             $scope.data = response.data || 'Request failed';
             $scope.status = response.status;
         });
+
+        $scope.showImage = function (photoId) {
+            $location.url('image/' + photoId);
+        }
     });
 });
