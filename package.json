@@ -1,0 +1,17 @@
+{
+  "name": "photo-app",
+  "version": "1.0.0",
+  "description": "photo view web-application",
+  "main": "index.html",
+  "dependencies": {
+    "requirejs": "^2.3.3",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
