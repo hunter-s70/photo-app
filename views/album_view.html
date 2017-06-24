@@ -1,1 +1,7 @@
-<p>This is the img view.</p>
+<ul>
+    <li ng-repeat="item in data" style="display: inline-block;">
+        <img src="{{item.thumbnailUrl}}" title="{{item.title}}" ng-click="showPhoto(item.id)" >
+        <span>{{item.title}}</span>
+        <span>Album: {{item.albumId}}</span>
+    </li>
+</ul>

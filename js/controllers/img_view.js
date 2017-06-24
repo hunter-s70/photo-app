@@ -13,18 +13,13 @@ define(['angular'], function (angular) {
         $scope.response = null;
         $scope.method = 'GET';
         $scope.photoId = $location.url().split('/').splice(-1, 1);
-        console.log($scope.photoId);
         $scope.url = 'http://jsonplaceholder.typicode.com/photos/' + $scope.photoId;
 
         $http({method: $scope.method, url: $scope.url}).
-        then(function(response) {
-            console.log(response);
-            $scope.status = response.status;
-            $scope.data = response.data;
-            console.log($scope.data);
-        }, function(response) {
-            $scope.data = response.data || 'Request failed';
-            $scope.status = response.status;
+            then(function(response) {
+                $scope.status = response.status;
+                $scope.data = response.data;
+                console.log($scope.data);
         });
     });
 });

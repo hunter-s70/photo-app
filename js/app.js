@@ -1,4 +1,8 @@
-define(['angular', 'controllers/main', 'controllers/img_view', 'controllers/album_view'],
+define(['angular',
+        'controllers/main',
+        'controllers/img_view',
+        'controllers/album_view'
+    ],
 function (angular, MainCtrl, imgViewCtrl, albumViewCtrl) {
   'use strict';
 
