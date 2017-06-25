@@ -3,8 +3,10 @@ define(['angular',
         'controllers/img_view',
         'controllers/album_view',
         'services/getPhotoData',
+        'services/scrollLoader',
+        'directives/lazyScroll'
     ],
-function (angular, MainCtrl, imgViewCtrl, albumViewCtrl, getPhotoData) {
+function (angular, MainCtrl, imgViewCtrl, albumViewCtrl, getPhotoData, scrollLoader, lazyScroll) {
   'use strict';
 
   /**
@@ -21,6 +23,8 @@ function (angular, MainCtrl, imgViewCtrl, albumViewCtrl, getPhotoData) {
         'angularApp.controllers.imgViewCtrl',
         'angularApp.controllers.albumViewCtrl',
         'angularApp.services.getPhotoData',
+        'angularApp.services.scrollLoader',
+        'angularApp.directives.lazyScroll',
         'ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider

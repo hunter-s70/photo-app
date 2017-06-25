@@ -14,6 +14,11 @@ $main-green: #9fca4b;
   transition: all ease .2s;
 }
 
+html, body {
+  min-height: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Exo', sans-serif;
   font-weight: 200;
@@ -59,8 +64,10 @@ body {
 /* Layout style ------------------------------------- */
 
 .l-container {
+  position: relative;
   margin: 0 auto 30px;
   width: 100%;
+  min-height: 100%;
   color: #fff;
   background: $dark;
   padding-bottom: 63px;
@@ -137,7 +144,7 @@ body {
   width: 100%;
   text-align: center;
   .b-photo-preview__photo {
-    width: 100%;
+    width: 60%;
   }
 }
 
@@ -168,7 +175,7 @@ body {
 
   .b-photo-preview {
     .b-photo-preview__photo {
-      width: 80%;
+      width: 50%;
     }
   }
 }

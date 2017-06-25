@@ -9,11 +9,11 @@ define(['angular'], function (angular) {
    * Controller of the angularApp
    */
   angular.module('angularApp.controllers.MainCtrl', [])
-    .controller('MainCtrl', function ($scope, $http, $location, GetPhotoData) {
+    .controller('MainCtrl', function ($scope, $http, $location, ScrollLoader) {
         $scope.method = 'GET';
         $scope.url = 'http://jsonplaceholder.typicode.com/photos';
 
-        GetPhotoData($scope.method, $scope.url, $scope);
+        $scope.data = new ScrollLoader();
 
         $scope.showPhoto = function (photoId) {
             $location.url('image/' + photoId);

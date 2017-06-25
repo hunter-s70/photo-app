@@ -1,5 +1,5 @@
-<ul class="b-photos">
-  <li class="b-photos__wrap" ng-repeat="item in data">
+<ul class="b-photos" lazy-scroll="data.nextPage()" lazy-scroll-disabled="data.busy" lazy-scroll-distance="2">
+  <li class="b-photos__wrap" ng-repeat="item in data.photo">
     <img class="b-photos__photo"
          ng-src="{{item.thumbnailUrl}}"
          title="{{item.title}}"
