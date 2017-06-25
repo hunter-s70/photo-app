@@ -4,13 +4,39 @@
     <meta charset="utf-8">
     <title>Phoho-app</title>
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Exo:200,300,400,500,600,700,800,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body ng-app="angularApp">
 
-    <div class="container">
+    <div class="l-container">
+
+      <header class="l-header">
+        <h1 class="g-site-title g-cursor-default">Photo-gallery</h1>
+        <nav class="b-nav m-nav_right">
+          <a class="b-nav__item fa fa-home fa-2x" title="root" href="#/"></a>
+          <a class="b-nav__item fa fa-google-plus-official fa-2x" title="google" href="https://www.google.com" target="_blank"></a>
+        </nav>
+      </header>
+
+
       <div ng-view></div>
+
+
+      <footer class="l-footer">
+        <nav class="b-nav">
+          <a class="b-nav__item fa fa-github fa-2x"
+             title="work on gitHub"
+             href="https://github.com/hunter-s70/photo-app/tree/develop"
+             target="_blank"
+          ></a>
+          <a class="b-nav__item m-nav__item_none" href="#" title="author">sergey_buhtoyarov</a>
+        </nav>
+      </footer>
+
     </div>
 
     <script src="node_modules/requirejs/require.js" data-main="js/main.js"></script>

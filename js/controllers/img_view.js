@@ -21,5 +21,9 @@ define(['angular'], function (angular) {
                 $scope.data = response.data;
                 console.log($scope.data);
         });
+
+        $scope.showAlbum = function (albumId) {
+            $location.url('album/' + albumId);
+        };
     });
 });

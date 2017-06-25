@@ -1,1 +1,5 @@
-<img src="{{data.url}}" title="{{data.title}}" >
+<div class="b-photo-preview">
+    <img class="b-photo-preview__photo" ng-src="{{data.url}}" title="{{data.title}}">
+    <span class="g-ellipsis-title g-cursor-default">{{data.title}}</span>
+    <span class="g-photos-album" ng-click="showAlbum(data.albumId)">Album: {{data.albumId}}</span>
+</div>

@@ -1,7 +1,10 @@
-<ul>
-    <li ng-repeat="item in data" style="display: inline-block;">
-        <img src="{{item.thumbnailUrl}}" title="{{item.title}}" ng-click="showPhoto(item.id)" >
-        <span>{{item.title}}</span>
-        <span>Album: {{item.albumId}}</span>
+<ul class="b-photos">
+    <li class="b-photos__wrap" ng-repeat="item in data">
+        <img class="b-photos__photo"
+             src="{{item.thumbnailUrl}}"
+             title="{{item.title}}"
+             ng-click="showPhoto(item.id)" >
+        <span class="g-ellipsis-title g-cursor-default">{{item.title}}</span>
+        <span class="g-cursor-default">Album: {{item.albumId}}</span>
     </li>
 </ul>
