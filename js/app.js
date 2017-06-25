@@ -1,9 +1,10 @@
 define(['angular',
         'controllers/main',
         'controllers/img_view',
-        'controllers/album_view'
+        'controllers/album_view',
+        'services/getPhotoData',
     ],
-function (angular, MainCtrl, imgViewCtrl, albumViewCtrl) {
+function (angular, MainCtrl, imgViewCtrl, albumViewCtrl, getPhotoData) {
   'use strict';
 
   /**
@@ -19,6 +20,7 @@ function (angular, MainCtrl, imgViewCtrl, albumViewCtrl) {
         'angularApp.controllers.MainCtrl',
         'angularApp.controllers.imgViewCtrl',
         'angularApp.controllers.albumViewCtrl',
+        'angularApp.services.getPhotoData',
         'ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider
